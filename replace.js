@@ -1,14 +1,20 @@
 console.log('running')
 //document.body.innerHTML = document.body.innerHTML.replace('"subscribe', "YOU'RE WASTING TIME")
 
+// Youtube specific
 findAndReplaceDOMText(document.body, {
-  find: 'Japanese',
+  find: /subscribe [0-9]+K/ig,
+  portionMode: "first",
   replace: "YOU'RE WASTING TIME"
 })
 
-// Youtube specific
 findAndReplaceDOMText(document.body, {
-  find: 'Subscribe',
+  find: /reply/gi,
+  replace: "YOU'RE WASTING TIME"
+})
+
+findAndReplaceDOMText(document.body, {
+  find: 'New',
   replace: "YOU'RE WASTING TIME"
 })
 
@@ -23,7 +29,17 @@ findAndReplaceDOMText(document.body, {
 })
 
 findAndReplaceDOMText(document.body, {
-  find: 'views',
+  find: 'Comments',
+  replace: "YOU'RE WASTING TIME"
+})
+
+findAndReplaceDOMText(document.body, {
+  find: 'Sort by',
+  replace: "YOU'RE WASTING TIME"
+})
+
+findAndReplaceDOMText(document.body, {
+  find: /views/gi,
   replace: "YOU'RE WASTING TIME"
 })
 
