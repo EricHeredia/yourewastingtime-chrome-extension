@@ -90,7 +90,7 @@ findAndReplaceDOMText(document.body, {
 })
 
 findAndReplaceDOMText(document.body, {
-  find: /live now/ig,
+  find: 'live now',
   replace: "YOU'RE WASTING TIME"
 })
 

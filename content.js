@@ -7,3 +7,7 @@ chrome.runtime.onMessage.addListener(
     }
   }
 )
+
+setTimeout(() => {
+  chrome.runtime.sendMessage({"message": "play_pause", "status": "play"});
+}, 5000)
