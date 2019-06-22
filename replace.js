@@ -2,6 +2,7 @@ console.log('running')
 //document.body.innerHTML = document.body.innerHTML.replace('"subscribe', "YOU'RE WASTING TIME")
 
 // Youtube specific
+
 findAndReplaceDOMText(document.body, {
   find: /subscribe [0-9]+K/ig,
   portionMode: "first",
@@ -50,6 +51,11 @@ findAndReplaceDOMText(document.body, {
 
 findAndReplaceDOMText(document.body, {
   find: 'Show more',
+  replace: "YOU'RE WASTING TIME"
+})
+
+findAndReplaceDOMText(document.body, {
+  find: 'Add a public comment...',
   replace: "YOU'RE WASTING TIME"
 })
 
