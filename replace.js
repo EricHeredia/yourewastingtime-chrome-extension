@@ -3,6 +3,39 @@ console.log('running')
 
 // Youtube specific
 
+const youtubeWords = [
+  /subscribe [0-9]+K/ig,
+  /reply/gi,
+  'New',
+  'Share',
+  'Save',
+  'Comments',
+  'Sort by',
+  /views/gi,
+  'Autoplay',
+  'Show more',
+  'Add a public comment...',
+  'Up next',
+  'Published',
+  'Recommended for you',
+  'ago',
+  'View reply',
+  /View.+replies/ig,
+  'live now',
+  /report search predictions/ig
+]
+
+for (let word in youtubeWords) {
+  setTimeout(() => {
+    findAndReplaceDOMText(document.body, {
+      find: youtubeWords[word],
+      portionMod: 'first',
+      replace: "YOU'RE WASTING TIME"
+    })
+  }, 5000)
+}
+
+/*
 findAndReplaceDOMText(document.body, {
   find: /subscribe [0-9]+K/ig,
   portionMode: "first",
@@ -110,3 +143,4 @@ findAndReplaceDOMText(document.body, {
   find: 'FORCING',
   replace: "YOU'RE WASTING TIME"
 })
+*/
